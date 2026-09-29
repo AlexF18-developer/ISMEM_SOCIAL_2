@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 
@@ -572,12 +571,9 @@ export default function Home() {
                 )}
 
                 {post.imageUrl && (
-                  <Image
+                  <img
                     src={post.imageUrl}
                     alt="Contenido de la publicación"
-                    width={1200}
-                    height={800}
-                    sizes="(max-width: 672px) 100vw, 640px"
                     className="max-h-[420px] w-full rounded-lg object-cover"
                   />
                 )}
